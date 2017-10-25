@@ -9,8 +9,8 @@ puts "Getting all people: #{response.code} #{response.message}"
 all_people = response.parsed_response
 
 # GET /projects.json
-projects = requester.get_all_projects
-puts "Getting all projects: #{projects.code} #{projects.message}"
+response = requester.get_all_projects
+puts "Getting all projects: #{response.code} #{response.message}"
 all_projects = response.parsed_response
 
 #Getting all people who have access to any projects

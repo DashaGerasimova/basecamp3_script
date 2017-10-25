@@ -22,6 +22,11 @@ class BasecampRequester
     self.class.get("/projects/#{project_id}/people.json", @options)
   end
 
+  # DELETE /people/1.json
+  def delete_person(person_id)
+    self.class.delete("/people/#{person_id}.json", @options)
+  end
+
   # GET /projects.json
   def get_all_projects
     self.class.get("/projects.json", @options)

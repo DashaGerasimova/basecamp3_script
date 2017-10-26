@@ -19,7 +19,7 @@ people_who_have_project = Set.new
 all_projects.each do |project|
   response = requester.get_people_on_project(project["id"])
   puts "Getting all people on project №#{project["id"]}: #{response.code} #{response.message}"
-  people_who_have_project += response.parsed_response 
+  people_who_have_project += response.parsed_response
 end
 
 #Deleting all people without projects

@@ -1,6 +1,6 @@
 # basecamp3_script
 Script that deletes people from basecamp, who doesn't have access to any project
-# How to use
+## How to use
 First of all, set required environmental variables:
 ```
 export ACCESS_TOKEN=PASTE_YOUR_ACCESS_TOKEN_HERE
@@ -23,3 +23,14 @@ thor script:run
 thor script:run --delete
 ```
 (Script that deletes all extra people)
+
+## How to get my ACCESS_TOKEN?
+To get OAuth2 access token from basecamp 3, you should do three steps:
+1) Open this link in browser:
+https://launchpad.37signals.com/authorization/new?type=web_server&client_id=ENTER_YOUR_CLIENT_ID&redirect_uri=ENTER_YOUR_REDIRECT_URI
+Click "Accept it"
+2) Copy verification code from address bar in opened page
+(https://example.com/auth?code=YOUR_CODE_IS_HERE)
+3) run curl -d "type=web_server&client_id=ENTER_YOUR_CLIENT_ID&redirect_uri=ENTER_YOUR_REDIRECT_URI" -X POST https://launchpad.37signals.com/authorization/token
+
+After that you should recieve your access_token

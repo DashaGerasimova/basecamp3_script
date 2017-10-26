@@ -2,7 +2,7 @@ require 'httparty'
 
 class BasecampRequester
   include HTTParty
-  base_uri "https://3.basecamp.com/#{ENV["ACCOUNT_ID"]}"
+  base_uri "https://3.basecampapi.com/#{ENV["ACCOUNT_ID"]}"
 
   def initialize()
     @options = {

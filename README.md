@@ -16,5 +16,10 @@ git clone https://github.com/DashaGerasimova/basecamp3_script.git
 cd basecamp3_script
 ```
 ```
-ruby bc3_script.rb
+thor script:run
 ```
+(This is safe mode. It only gets extra people's id)
+```
+thor script:run --delete
+```
+(Script that deletes all extra people)
